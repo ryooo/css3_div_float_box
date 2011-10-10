@@ -1,0 +1,31 @@
+﻿.float_box{
+	float:left;
+	padding:2px;
+	width:102px;
+	height:102px;
+	border:1px solid;
+	border-radius: 6px;
+	-webkit-transition-property:-webkit-transform, opacity;
+	-webkit-transition-duration:0.8s;
+	transition-timing-function:ease-in-out;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.image_box{
+	width:100px;
+	height:100px;
+	border:none;
+	border-radius: 4px;
+	overflow:hidden;
+}
+.image_box img{
+	width:100px;
+	height:100px;
+	border-radius: 3px;
+}
+.bloat_boxes {
+	position:relative;
+}
