@@ -16,7 +16,7 @@
 			boxes = $("div.float_box");
 			$.map(boxes, function (i, num) {
 				var box = boxes[num];
-				var val = box.dataset.val;
+				var val = $(box).attr("data-val");
 				if (val % filter_num !== 0) {
 					box.isShow = false;
 					box.unit_l = unit_l;
@@ -41,15 +41,19 @@
 			$.map(boxes, function (i, num) {
 				var box = boxes[num];
 				if (box.isShow === true) {
+					$(box).css("-ms-transform", "translate(" + box.unit_l + "px, " + box.unit_t + "px) scale(1, 1)");
 					$(box).css("-webkit-transform", "translate3d(" + box.unit_l + "px, " + box.unit_t + "px, 0px) scale3d(1, 1, 1)");
+					$(box).css("-moz-transform", "translate(" + box.unit_l + "px, " + box.unit_t + "px) scale(1, 1)");
 				} else {
+					$(box).css("-ms-transform", "translate(" + box.unit_l + "px, " + box.unit_t + "px) scale(0.001, 0.001)");
 					$(box).css("-webkit-transform", "translate3d(" + box.unit_l + "px, " + box.unit_t + "px, 0px) scale3d(0.001, 0.001, 1)");
+					$(box).css("-moz-transform", "translate(" + box.unit_l + "px, " + box.unit_t + "px) scale(0.001, 0.001)");
 				}
 			});
 		}
 	});
 	$("a.controller").click(function() {
-		filter_num = $(this).get(0).dataset.filter;
+		filter_num = $(this).attr("data-filter");
 		$(this).filterByNum();
 	});
 	$(window).resize(function(){

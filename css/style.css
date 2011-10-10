@@ -5,9 +5,12 @@
 	height:102px;
 	border:1px solid;
 	border-radius: 6px;
+	-ms-transition-property: -ms-transform, opacity;
+	-ms-transition-duration: 0.8s;
+	-moz-transition-property: -moz-transform, opacity;
+	-moz-transition-duration: 0.8s;
 	-webkit-transition-property:-webkit-transform, opacity;
-	-webkit-transition-duration:0.8s;
-	transition-timing-function:ease-in-out;
+	-webkit-transition-duration :0.8s;
 	overflow:hidden;
 	position:absolute;
 	top:0px;
