@@ -6,71 +6,217 @@
 
 
 
-<link rel="stylesheet" href="./css/style.css">
-</Style>
 
-
-
-
+<style type="text/css">
+#flickable {
+  border: 1px solid #CCC;
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+  position:relative;
+}
+#flickable ul {
+  list-style: none;
+  width:12000px;
+  margin: 0;
+  padding: 0;
+}
+#flickable li {
+  width: 310px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+#flickable img {
+  -webkit-transition-property:-webkit-transform, opacity, width, height;
+  -webkit-transition-duration :0.8s;
+}
+#flickable .block {
+  color: #FFF;
+  padding: 0;
+}
+</style>
 </head>
-<body style="height: 6300px;">
+<body style="height: 420px;">
 
-<div> 絞り込み
-<a href="#" data-filter="0" class="controller">すべて</a>
-<a href="#" data-filter="1" class="controller">神</a>
-<a href="#" data-filter="2" class="controller">悪魔</a>
-<a href="#" data-filter="3" class="controller">人間</a>
+<script src="./js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="./js/jquery.flickable.js" type="text/javascript"></script>
+
+<div id="flickable">
+  <ul>
+  </ul>
+<img src="img/dog.jpg" data-price="101" data-val="devil woman">
+<img src="img/dog.jpg" data-price="202" data-val="devil man">
+<img src="img/dog.jpg" data-price="303" data-val="god man">
+<img src="img/dog.jpg" data-price="204" data-val="god woman">
+<img src="img/dog.jpg" data-price="205" data-val="god man">
+<img src="img/dog.jpg" data-price="106" data-val="human man">
+<img src="img/dog.jpg" data-price="207" data-val="human man">
+<img src="img/dog.jpg" data-price="308" data-val="human woman">
+<img src="img/dog.jpg" data-price="509" data-val="devil woman">
+<img src="img/dog.jpg" data-price="110" data-val="devil man">
+<img src="img/dog.jpg" data-price="211" data-val="devil woman">
+<img src="img/dog.jpg" data-price="512" data-val="human man">
+<img src="img/dog.jpg" data-price="213" data-val="god man">
+<img src="img/dog.jpg" data-price="314" data-val="human woman">
+<img src="img/dog.jpg" data-price="215" data-val="devil woman">
+<img src="img/dog.jpg" data-price="216" data-val="god woman">
+<img src="img/dog.jpg" data-price="117" data-val="human woman">
+<img src="img/dog.jpg" data-price="118" data-val="devil woman">
+<img src="img/dog.jpg" data-price="219" data-val="god woman">
+<img src="img/dog.jpg" data-price="520" data-val="human man">
+<img src="img/dog.jpg" data-price="921" data-val="devil woman">
+<img src="img/dog.jpg" data-price="322" data-val="god woman">
+<img src="img/dog.jpg" data-price="323" data-val="god man">
+<img src="img/dog.jpg" data-price="224" data-val="devil woman">
+<img src="img/dog.jpg" data-price="425" data-val="devil man">
+<img src="img/dog.jpg" data-price="126" data-val="human woman">
+<img src="img/dog.jpg" data-price="427" data-val="human woman">
+<img src="img/dog.jpg" data-price="628" data-val="god woman">
+<img src="img/dog.jpg" data-price="729" data-val="god woman">
+<img src="img/dog.jpg" data-price="330" data-val="devil man">
+<img src="img/dog.jpg" data-price="131" data-val="human woman">
+<img src="img/dog.jpg" data-price="332" data-val="god man">
 </div>
+
 
 <div> サイズ
-<a href="#" data-filter="1" class="size_controller">1</a>
-<a href="#" data-filter="2" class="size_controller">2</a>
-<a href="#" data-filter="3" class="size_controller">3</a>
-<a href="#" data-filter="4" class="size_controller">4</a>
+<a href="#" data-filter="1" class="s_ctrl">1</a>
+<a href="#" data-filter="4" class="s_ctrl">4</a>
+<a href="#" data-filter="9" class="s_ctrl">9</a>
+</div>
+
+<div> 並び替え
+<a href="#" data-filter="price_asc" class="o_ctrl">価格↑</a>
+<a href="#" data-filter="price_desc" class="o_ctrl">価格↓</a>
 </div>
 
 
-<div class="bloat_boxes">
-
-<div class="float_box" data-val="2"><img src="img/655.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/657.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/659.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/661.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/663.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/665.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/667.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/669.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/671.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/673.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/675.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/677.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/679.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/681.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/683.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/685.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/687.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/689.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/691.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/693.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/695.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/697.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/699.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/701.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/703.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/705.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/707.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/709.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/711.jpg"></div>
-<div class="float_box" data-val="2"><img src="img/713.jpg"></div>
-<div class="float_box" data-val="3"><img src="img/715.jpg"></div>
-<div class="float_box" data-val="1"><img src="img/717.jpg"></div>
+<div> 絞り込み
+<a href="#" data-filter="all" class="ctrl">すべて</a>
+<a href="#" data-filter="god" class="ctrl">神</a>
+<a href="#" data-filter="devil" class="ctrl">悪魔</a>
+<a href="#" data-filter="human" class="ctrl">人間</a>
+<a href="#" data-filter="man" class="ctrl">男</a>
+<a href="#" data-filter="woman" class="ctrl">女</a>
 </div>
 
 
+<script type="text/javascript">
+var images = $("#flickable > img")
+var basediv = $('#flickable')
+var baseul = $('#flickable > ul')
+var filter_key = 'all';
+var size = 4;
+var size_conf = {
+  1: {width:300, height:390, cnt: 1},
+  4: {width:145, height:190, cnt: 2},
+  9: {width:93, height:125, cnt: 3},
+}
 
-<script src="./js/jq.mobi.js"></script>
-<script type="text/javascript" src="./js/divfloat.js"></script>
+// 順番を決める
+f_sort = function (key) {
+  var compairs = {
+    'price_asc': function(a, b){
+      return $(a).attr('data-price') - $(b).attr('data-price')
+    },
+    'price_desc': function(a, b){
+      return $(b).attr('data-price') - $(a).attr('data-price')
+    }
+  }
+  sorted_images = images.sort(compairs[key])
+  
+  console.log(key)
+  sorted_images.each (function(i){
+    console.log($(sorted_images[i]).attr("data-price"))
+  })
+  
+}
+f_sort('price_asc')
 
+// liに当て込む
+f_filter = function(key, size) {
+  baseul.html('')
+  var idx, li
+  var cnt = 0
+  var max_idx = sorted_images.length
+  for (i = 0; i < max_idx; i++) {
+    sorted_image = $(sorted_images[i])
+    var vals = $(sorted_image).attr("data-val");
+    vals = vals.split(' ')
+    if ($.inArray(key, vals) && key != 'all') {
+      sorted_image.is_show = false
+    } else {
+      sorted_image.is_show = true
+    }
+    if (cnt % size == 0) {
+      li = $('<li></li>')
+      baseul.append(li)
+    }
+    sorted_image.css('width', size_conf[size].width + 'px')
+    sorted_image.css('height', size_conf[size].height + 'px')
+    sorted_image.css('position', 'absolute')
+    t_idx = (cnt % size_conf[size].cnt)
+    sorted_image.unit_t = (t_idx * size_conf[size].height) + (t_idx * 10)
+    l_idx = Math.floor(cnt / size_conf[size].cnt)
+    sorted_image.unit_l = (l_idx * size_conf[size].width) + ((l_idx + 1) * 10)
+    sorted_images[i] = sorted_image
+    if (sorted_image.is_show == true) {
+      cnt += 1
+    }
+  }
+}
+f_filter(filter_key, size)
+
+// アニメーション
+f_animate = function() {
+  var max_idx = sorted_images.length
+  for (i = 0; i < max_idx; i++) {
+    var sorted_image = sorted_images[i];
+    if (sorted_image.is_show === true) {
+      $(sorted_image).css("-webkit-transform", "translate3d(" + sorted_image.unit_l + "px, " + sorted_image.unit_t + "px, 0px) scale3d(1, 1, 1)");
+    } else {
+      $(sorted_image).css("-webkit-transform", "translate3d(" + sorted_image.unit_l + "px, " + sorted_image.unit_t + "px, 0px) scale3d(0.001, 0.001, 1)");
+      console.log(sorted_image)
+    }
+  }
+}
+f_animate()
+
+f_set_flickable = function() {
+  $(function() {
+    $('#flickable').flickable({
+      section: 'li'
+    });
+  });
+  basediv.find('li').each(function(elem) {
+    //$(elem).css('margint-left', '100px')
+  })
+}
+f_set_flickable()
+
+$("a.s_ctrl").bind('click', function() {
+  size = $(this).attr("data-filter");
+  f_filter(filter_key, size)
+  f_animate()
+  f_set_flickable()
+});
+
+$("a.o_ctrl").bind('click', function() {
+  sort = $(this).attr("data-filter");
+  f_sort(sort)
+  f_filter(filter_key, size)
+  f_animate()
+  f_set_flickable()
+});
+$("a.ctrl").bind('click', function() {
+  filter_key = $(this).attr("data-filter");
+  f_filter(filter_key, size)
+  f_animate()
+  f_set_flickable()
+});
+</script>
 
 
 </body>
